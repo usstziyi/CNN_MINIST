@@ -3,8 +3,14 @@
 基于PyTorch的手写数字识别CNN模型，针对Apple Silicon设备优化了MPS硬件加速支持。
 
 ## 项目结构
+```tree
+├── data/                 # 数据集目录
+├── mnist_cnn.py          # 命令行版CNN模型实现
+├── mnist_cnn_mps.ipynb   # Jupyter Notebook版，含可视化和MPS加速
+├── model/                # 模型权重保存目录
+├── vision.ipynb          # 视觉相关辅助代码
+└── .gitignore            # Git忽略规则文件
 ```
-.\n├── mnist_cnn.py          # 命令行版CNN模型实现\n├── mnist_cnn_mps.ipynb   # Jupyter Notebook版，含可视化和MPS加速\n├── model/                # 模型权重保存目录\n├── vision.ipynb          # 视觉相关辅助代码\n└── .gitignore            # Git忽略规则文件\n```
 
 ## 环境要求
 - Python 3.x
