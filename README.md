@@ -7,8 +7,9 @@
 ├── data/                 # 数据集目录
 ├── mnist_cnn.py          # 命令行版CNN模型实现
 ├── mnist_cnn_mps.ipynb   # Jupyter Notebook版，含可视化和MPS加速
+├── mnist_cnn_mps.py      # Python脚本版，含MPS加速
 ├── model/                # 模型权重保存目录
-├── vision.ipynb          # 视觉相关辅助代码
+├── macos_mps_test.ipynb  # macOS MPS测试代码
 └── .gitignore            # Git忽略规则文件
 ```
 
@@ -33,6 +34,11 @@ python mnist_cnn.py
 ### 运行Notebook版本
 ```bash
 jupyter notebook mnist_cnn_mps.ipynb
+```
+
+### 运行Python脚本版本
+```bash
+python mnist_cnn_mps.py
 ```
 
 ## 功能特点

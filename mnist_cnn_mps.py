@@ -4,6 +4,7 @@ import torch.nn.functional as F
 import torch.optim as optim
 from torchvision import datasets, transforms
 from torch.utils.data import DataLoader
+import os
 import time
 
 # 检查MPS设备是否可用
@@ -112,5 +113,6 @@ end_time = time.time()
 print(f'训练和测试总用时: {end_time - start_time:.2f}秒')
 
 # 保存模型
+os.makedirs('model', exist_ok=True)  # 确保model目录存在
 torch.save(model.state_dict(), 'model/mnist_cnn_model.pth')
 print('模型已保存为 model/mnist_cnn_model.pth')
