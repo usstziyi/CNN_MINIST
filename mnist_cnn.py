@@ -112,5 +112,5 @@ end_time = time.time()
 print(f'训练和测试总用时: {end_time - start_time:.2f}秒')
 
 # 保存模型
-torch.save(model.state_dict(), 'mnist_cnn_model.pth')
-print('模型已保存为 mnist_cnn_model.pth')
+torch.save(model.state_dict(), 'model/mnist_cnn_model.pth')
+print('模型已保存为 model/mnist_cnn_model.pth')
