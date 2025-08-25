@@ -7,8 +7,16 @@ from torch.utils.data import DataLoader
 import os
 import time
 
-# 检查MPS设备是否可用
-device = torch.device("mps" if torch.backends.mps.is_available() else "cpu")
+# 检查 CUDA 和 MPS 设备是否可用，优先使用 CUDA，其次 MPS，最后使用 CPU
+# 检查 CUDA 设备是否可用
+if torch.cuda.is_available():
+    device = torch.device(f"cuda:{torch.cuda.current_device()}")
+# 检查 MPS 设备是否可用
+elif torch.backends.mps.is_available():
+    device = torch.device("mps")
+# 若 CUDA 和 MPS 都不可用，使用 CPU
+else:
+    device = torch.device("cpu")
 print(f"使用设备: {device}")
 
 # 定义CNN模型
